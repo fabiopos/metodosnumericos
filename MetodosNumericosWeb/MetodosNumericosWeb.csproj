@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C397370A-5291-430B-869E-AFA3E0C1A87A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetodosNumericosWeb</RootNamespace>
+    <AssemblyName>MetodosNumericosWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Chart.Mvc, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Chart.Mvc.1.0.0.2\lib\net45\Chart.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FParsec, Version=1.0.0.0, Culture=neutral, PublicKeyToken=40ccfc0a09edbb5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\FParsec.1.0.1\lib\net40-client\FParsec.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FParsecCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=40ccfc0a09edbb5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\FParsec.1.0.1\lib\net40-client\FParsecCS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FSharp.Core, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FSharp.Core.3.1.2.5\lib\net40\FSharp.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.18.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.18.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MathNet.Numerics.FSharp, Version=3.18.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.FSharp.3.18.0\lib\net40\MathNet.Numerics.FSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MathNet.Symbolics, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Symbolics.0.14.0\lib\net40\MathNet.Symbolics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\chart.js\dist\Chart.bundle.js" />
+    <Content Include="Scripts\chart.js\dist\Chart.bundle.min.js" />
+    <Content Include="Scripts\chart.js\dist\Chart.js" />
+    <Content Include="Scripts\chart.js\dist\Chart.min.js" />
+    <Content Include="Scripts\chart.js\gulpfile.js" />
+    <Content Include="Scripts\chart.js\karma.conf.ci.js" />
+    <Content Include="Scripts\chart.js\karma.conf.js" />
+    <Content Include="Scripts\chart.js\karma.coverage.conf.js" />
+    <Content Include="Scripts\chart.js\samples\animation\progress-bar.html" />
+    <Content Include="Scripts\chart.js\samples\bar\bar-horizontal.html" />
+    <Content Include="Scripts\chart.js\samples\bar\bar-multi-axis.html" />
+    <Content Include="Scripts\chart.js\samples\bar\bar-stacked-group.html" />
+    <Content Include="Scripts\chart.js\samples\bar\bar-stacked.html" />
+    <Content Include="Scripts\chart.js\samples\bar\bar.html" />
+    <Content Include="Scripts\chart.js\samples\bubble.html" />
+    <Content Include="Scripts\chart.js\samples\combo-bar-line.html" />
+    <Content Include="Scripts\chart.js\samples\data_labelling.html" />
+    <Content Include="Scripts\chart.js\samples\doughnut.html" />
+    <Content Include="Scripts\chart.js\samples\legend\pointstyle.html" />
+    <Content Include="Scripts\chart.js\samples\legend\positions.html" />
+    <Content Include="Scripts\chart.js\samples\line\different-point-sizes.html" />
+    <Content Include="Scripts\chart.js\samples\line\interpolation-modes.html" />
+    <Content Include="Scripts\chart.js\samples\line\line-multi-axis.html" />
+    <Content Include="Scripts\chart.js\samples\line\line-skip-points.html" />
+    <Content Include="Scripts\chart.js\samples\line\line-stacked-area.html" />
+    <Content Include="Scripts\chart.js\samples\line\line-stepped.html" />
+    <Content Include="Scripts\chart.js\samples\line\line-styles.html" />
+    <Content Include="Scripts\chart.js\samples\line\line.html" />
+    <Content Include="Scripts\chart.js\samples\line\point-styles.html" />
+    <Content Include="Scripts\chart.js\samples\pie.html" />
+    <Content Include="Scripts\chart.js\samples\polar-area.html" />
+    <Content Include="Scripts\chart.js\samples\radar\radar-skip-points.html" />
+    <Content Include="Scripts\chart.js\samples\radar\radar.html" />
+    <Content Include="Scripts\chart.js\samples\scales\display-settings.html" />
+    <Content Include="Scripts\chart.js\samples\scales\filtering-labels.html" />
+    <Content Include="Scripts\chart.js\samples\scales\gridlines.html" />
+    <Content Include="Scripts\chart.js\samples\scales\line-non-numeric-y.html" />
+    <Content Include="Scripts\chart.js\samples\scales\linear\min-max-settings.html" />
+    <Content Include="Scripts\chart.js\samples\scales\linear\step-size.html" />
+    <Content Include="Scripts\chart.js\samples\scales\linear\suggested-min-max-settings.html" />
+    <Content Include="Scripts\chart.js\samples\scales\logarithmic\line-logarithmic.html" />
+    <Content Include="Scripts\chart.js\samples\scales\logarithmic\scatter-logX.html" />
+    <Content Include="Scripts\chart.js\samples\scales\multiline-labels.html" />
+    <Content Include="Scripts\chart.js\samples\scales\time\combo-time-scale.html" />
+    <Content Include="Scripts\chart.js\samples\scales\time\line-time-point-data.html" />
+    <Content Include="Scripts\chart.js\samples\scales\time\line-time-scale.html" />
+    <Content Include="Scripts\chart.js\samples\scatter\scatter-multi-axis.html" />
+    <Content Include="Scripts\chart.js\samples\scatter\scatter.html" />
+    <Content Include="Scripts\chart.js\samples\tooltips\dataPoints-customTooltips.html" />
+    <Content Include="Scripts\chart.js\samples\tooltips\interaction-modes.html" />
+    <Content Include="Scripts\chart.js\samples\tooltips\line-customTooltips.html" />
+    <Content Include="Scripts\chart.js\samples\tooltips\pie-customTooltips.html" />
+    <Content Include="Scripts\chart.js\samples\tooltips\position-modes.html" />
+    <Content Include="Scripts\chart.js\samples\tooltips\tooltip-callbacks.html" />
+    <Content Include="Scripts\chart.js\samples\utils.js" />
+    <Content Include="Scripts\chart.js\src\chart.js" />
+    <Content Include="Scripts\chart.js\src\charts\Chart.Bar.js" />
+    <Content Include="Scripts\chart.js\src\charts\Chart.Bubble.js" />
+    <Content Include="Scripts\chart.js\src\charts\Chart.Doughnut.js" />
+    <Content Include="Scripts\chart.js\src\charts\Chart.Line.js" />
+    <Content Include="Scripts\chart.js\src\charts\Chart.PolarArea.js" />
+    <Content Include="Scripts\chart.js\src\charts\Chart.Radar.js" />
+    <Content Include="Scripts\chart.js\src\charts\Chart.Scatter.js" />
+    <Content Include="Scripts\chart.js\src\controllers\controller.bar.js" />
+    <Content Include="Scripts\chart.js\src\controllers\controller.bubble.js" />
+    <Content Include="Scripts\chart.js\src\controllers\controller.doughnut.js" />
+    <Content Include="Scripts\chart.js\src\controllers\controller.line.js" />
+    <Content Include="Scripts\chart.js\src\controllers\controller.polarArea.js" />
+    <Content Include="Scripts\chart.js\src\controllers\controller.radar.js" />
+    <Content Include="Scripts\chart.js\src\core\core.animation.js" />
+    <Content Include="Scripts\chart.js\src\core\core.canvasHelpers.js" />
+    <Content Include="Scripts\chart.js\src\core\core.controller.js" />
+    <Content Include="Scripts\chart.js\src\core\core.datasetController.js" />
+    <Content Include="Scripts\chart.js\src\core\core.element.js" />
+    <Content Include="Scripts\chart.js\src\core\core.helpers.js" />
+    <Content Include="Scripts\chart.js\src\core\core.interaction.js" />
+    <Content Include="Scripts\chart.js\src\core\core.js" />
+    <Content Include="Scripts\chart.js\src\core\core.layoutService.js" />
+    <Content Include="Scripts\chart.js\src\core\core.legend.js" />
+    <Content Include="Scripts\chart.js\src\core\core.plugin.js" />
+    <Content Include="Scripts\chart.js\src\core\core.scale.js" />
+    <Content Include="Scripts\chart.js\src\core\core.scaleService.js" />
+    <Content Include="Scripts\chart.js\src\core\core.ticks.js" />
+    <Content Include="Scripts\chart.js\src\core\core.title.js" />
+    <Content Include="Scripts\chart.js\src\core\core.tooltip.js" />
+    <Content Include="Scripts\chart.js\src\elements\element.arc.js" />
+    <Content Include="Scripts\chart.js\src\elements\element.line.js" />
+    <Content Include="Scripts\chart.js\src\elements\element.point.js" />
+    <Content Include="Scripts\chart.js\src\elements\element.rectangle.js" />
+    <Content Include="Scripts\chart.js\src\platforms\platform.dom.js" />
+    <Content Include="Scripts\chart.js\src\platforms\platform.js" />
+    <Content Include="Scripts\chart.js\src\scales\scale.category.js" />
+    <Content Include="Scripts\chart.js\src\scales\scale.linear.js" />
+    <Content Include="Scripts\chart.js\src\scales\scale.linearbase.js" />
+    <Content Include="Scripts\chart.js\src\scales\scale.logarithmic.js" />
+    <Content Include="Scripts\chart.js\src\scales\scale.radialLinear.js" />
+    <Content Include="Scripts\chart.js\src\scales\scale.time.js" />
+    <Content Include="Scripts\chart.js\test\controller.bar.tests.js" />
+    <Content Include="Scripts\chart.js\test\controller.bubble.tests.js" />
+    <Content Include="Scripts\chart.js\test\controller.doughnut.tests.js" />
+    <Content Include="Scripts\chart.js\test\controller.line.tests.js" />
+    <Content Include="Scripts\chart.js\test\controller.polarArea.tests.js" />
+    <Content Include="Scripts\chart.js\test\controller.radar.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.controller.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.datasetController.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.element.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.helpers.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.interaction.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.layoutService.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.legend.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.plugin.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.scaleService.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.title.tests.js" />
+    <Content Include="Scripts\chart.js\test\core.tooltip.tests.js" />
+    <Content Include="Scripts\chart.js\test\defaultConfig.tests.js" />
+    <Content Include="Scripts\chart.js\test\element.arc.tests.js" />
+    <Content Include="Scripts\chart.js\test\element.line.tests.js" />
+    <Content Include="Scripts\chart.js\test\element.point.tests.js" />
+    <Content Include="Scripts\chart.js\test\element.rectangle.tests.js" />
+    <Content Include="Scripts\chart.js\test\mockContext.js" />
+    <Content Include="Scripts\chart.js\test\platform.dom.tests.js" />
+    <Content Include="Scripts\chart.js\test\scale.category.tests.js" />
+    <Content Include="Scripts\chart.js\test\scale.linear.tests.js" />
+    <Content Include="Scripts\chart.js\test\scale.logarithmic.tests.js" />
+    <Content Include="Scripts\chart.js\test\scale.radialLinear.tests.js" />
+    <Content Include="Scripts\chart.js\test\scale.time.tests.js" />
+    <Content Include="Scripts\chartjs-color-string\.travis.yml" />
+    <Content Include="Scripts\chartjs-color-string\CHANGELOG.md" />
+    <Content Include="Scripts\chartjs-color-string\LICENSE" />
+    <Content Include="Scripts\chartjs-color-string\package.json" />
+    <Content Include="Scripts\chartjs-color-string\README.md" />
+    <Content Include="Scripts\chartjs-color\CHANGELOG.md" />
+    <Content Include="Scripts\chartjs-color\LICENSE" />
+    <Content Include="Scripts\chartjs-color\package.json" />
+    <Content Include="Scripts\chartjs-color\README.md" />
+    <Content Include="Scripts\color-convert\.travis.yml" />
+    <Content Include="Scripts\color-convert\CHANGELOG.md" />
+    <Content Include="Scripts\color-convert\component.json" />
+    <Content Include="Scripts\color-convert\LICENSE" />
+    <Content Include="Scripts\color-convert\package.json" />
+    <Content Include="Scripts\color-convert\README.md" />
+    <Content Include="Scripts\color-name\LICENSE" />
+    <Content Include="Scripts\color-name\package.json" />
+    <Content Include="Scripts\color-name\README.md" />
+    <Content Include="Scripts\chart.js\.editorconfig" />
+    <Content Include="Scripts\chart.js\.eslintignore" />
+    <Content Include="Scripts\chart.js\.eslintrc" />
+    <Content Include="Scripts\chart.js\.npmignore" />
+    <Content Include="Scripts\chart.js\bower.json" />
+    <Content Include="Scripts\chart.js\composer.json" />
+    <Content Include="Scripts\chart.js\config.jshintrc" />
+    <Content Include="Scripts\chart.js\CONTRIBUTING.md" />
+    <Content Include="Scripts\chart.js\docs\00-Getting-Started.md" />
+    <Content Include="Scripts\chart.js\docs\01-Chart-Configuration.md" />
+    <Content Include="Scripts\chart.js\docs\02-Scales.md" />
+    <Content Include="Scripts\chart.js\docs\03-Line-Chart.md" />
+    <Content Include="Scripts\chart.js\docs\04-Bar-Chart.md" />
+    <Content Include="Scripts\chart.js\docs\05-Radar-Chart.md" />
+    <Content Include="Scripts\chart.js\docs\06-Polar-Area-Chart.md" />
+    <Content Include="Scripts\chart.js\docs\07-Pie-Doughnut-Chart.md" />
+    <Content Include="Scripts\chart.js\docs\08-Bubble-Chart.md" />
+    <Content Include="Scripts\chart.js\docs\09-Advanced.md" />
+    <Content Include="Scripts\chart.js\docs\10-Notes.md" />
+    <Content Include="Scripts\chart.js\LICENSE.md" />
+    <Content Include="Scripts\chart.js\MAINTAINING.md" />
+    <Content Include="Scripts\chart.js\package.json" />
+    <Content Include="Scripts\chart.js\README.md" />
+    <Content Include="Scripts\chart.js\scripts\release.sh" />
+    <Content Include="Scripts\chart.js\thankyou.md" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\chartjs-color-string\color-string.js" />
+    <Content Include="Scripts\chartjs-color-string\test\basic.js" />
+    <Content Include="Scripts\chartjs-color\index.js" />
+    <Content Include="Scripts\color-convert\conversions.js" />
+    <Content Include="Scripts\color-convert\index.js" />
+    <Content Include="Scripts\color-convert\test\basic.js" />
+    <Content Include="Scripts\color-convert\test\speed.js" />
+    <Content Include="Scripts\color-name\index.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment\ender.js" />
+    <Content Include="Scripts\moment\locale\af.js" />
+    <Content Include="Scripts\moment\locale\ar-dz.js" />
+    <Content Include="Scripts\moment\locale\ar-kw.js" />
+    <Content Include="Scripts\moment\locale\ar-ly.js" />
+    <Content Include="Scripts\moment\locale\ar-ma.js" />
+    <Content Include="Scripts\moment\locale\ar-sa.js" />
+    <Content Include="Scripts\moment\locale\ar-tn.js" />
+    <Content Include="Scripts\moment\locale\ar.js" />
+    <Content Include="Scripts\moment\locale\az.js" />
+    <Content Include="Scripts\moment\locale\be.js" />
+    <Content Include="Scripts\moment\locale\bg.js" />
+    <Content Include="Scripts\moment\locale\bn.js" />
+    <Content Include="Scripts\moment\locale\bo.js" />
+    <Content Include="Scripts\moment\locale\br.js" />
+    <Content Include="Scripts\moment\locale\bs.js" />
+    <Content Include="Scripts\moment\locale\ca.js" />
+    <Content Include="Scripts\moment\locale\cs.js" />
+    <Content Include="Scripts\moment\locale\cv.js" />
+    <Content Include="Scripts\moment\locale\cy.js" />
+    <Content Include="Scripts\moment\locale\da.js" />
+    <Content Include="Scripts\moment\locale\de-at.js" />
+    <Content Include="Scripts\moment\locale\de-ch.js" />
+    <Content Include="Scripts\moment\locale\de.js" />
+    <Content Include="Scripts\moment\locale\dv.js" />
+    <Content Include="Scripts\moment\locale\el.js" />
+    <Content Include="Scripts\moment\locale\en-au.js" />
+    <Content Include="Scripts\moment\locale\en-ca.js" />
+    <Content Include="Scripts\moment\locale\en-gb.js" />
+    <Content Include="Scripts\moment\locale\en-ie.js" />
+    <Content Include="Scripts\moment\locale\en-nz.js" />
+    <Content Include="Scripts\moment\locale\eo.js" />
+    <Content Include="Scripts\moment\locale\es-do.js" />
+    <Content Include="Scripts\moment\locale\es.js" />
+    <Content Include="Scripts\moment\locale\et.js" />
+    <Content Include="Scripts\moment\locale\eu.js" />
+    <Content Include="Scripts\moment\locale\fa.js" />
+    <Content Include="Scripts\moment\locale\fi.js" />
+    <Content Include="Scripts\moment\locale\fo.js" />
+    <Content Include="Scripts\moment\locale\fr-ca.js" />
+    <Content Include="Scripts\moment\locale\fr-ch.js" />
+    <Content Include="Scripts\moment\locale\fr.js" />
+    <Content Include="Scripts\moment\locale\fy.js" />
+    <Content Include="Scripts\moment\locale\gd.js" />
+    <Content Include="Scripts\moment\locale\gl.js" />
+    <Content Include="Scripts\moment\locale\gom-latn.js" />
+    <Content Include="Scripts\moment\locale\he.js" />
+    <Content Include="Scripts\moment\locale\hi.js" />
+    <Content Include="Scripts\moment\locale\hr.js" />
+    <Content Include="Scripts\moment\locale\hu.js" />
+    <Content Include="Scripts\moment\locale\hy-am.js" />
+    <Content Include="Scripts\moment\locale\id.js" />
+    <Content Include="Scripts\moment\locale\is.js" />
+    <Content Include="Scripts\moment\locale\it.js" />
+    <Content Include="Scripts\moment\locale\ja.js" />
+    <Content Include="Scripts\moment\locale\jv.js" />
+    <Content Include="Scripts\moment\locale\ka.js" />
+    <Content Include="Scripts\moment\locale\kk.js" />
+    <Content Include="Scripts\moment\locale\km.js" />
+    <Content Include="Scripts\moment\locale\kn.js" />
+    <Content Include="Scripts\moment\locale\ko.js" />
+    <Content Include="Scripts\moment\locale\ky.js" />
+    <Content Include="Scripts\moment\locale\lb.js" />
+    <Content Include="Scripts\moment\locale\lo.js" />
+    <Content Include="Scripts\moment\locale\lt.js" />
+    <Content Include="Scripts\moment\locale\lv.js" />
+    <Content Include="Scripts\moment\locale\me.js" />
+    <Content Include="Scripts\moment\locale\mi.js" />
+    <Content Include="Scripts\moment\locale\mk.js" />
+    <Content Include="Scripts\moment\locale\ml.js" />
+    <Content Include="Scripts\moment\locale\mr.js" />
+    <Content Include="Scripts\moment\locale\ms-my.js" />
+    <Content Include="Scripts\moment\locale\ms.js" />
+    <Content Include="Scripts\moment\locale\my.js" />
+    <Content Include="Scripts\moment\locale\nb.js" />
+    <Content Include="Scripts\moment\locale\ne.js" />
+    <Content Include="Scripts\moment\locale\nl-be.js" />
+    <Content Include="Scripts\moment\locale\nl.js" />
+    <Content Include="Scripts\moment\locale\nn.js" />
+    <Content Include="Scripts\moment\locale\pa-in.js" />
+    <Content Include="Scripts\moment\locale\pl.js" />
+    <Content Include="Scripts\moment\locale\pt-br.js" />
+    <Content Include="Scripts\moment\locale\pt.js" />
+    <Content Include="Scripts\moment\locale\ro.js" />
+    <Content Include="Scripts\moment\locale\ru.js" />
+    <Content Include="Scripts\moment\locale\sd.js" />
+    <Content Include="Scripts\moment\locale\se.js" />
+    <Content Include="Scripts\moment\locale\si.js" />
+    <Content Include="Scripts\moment\locale\sk.js" />
+    <Content Include="Scripts\moment\locale\sl.js" />
+    <Content Include="Scripts\moment\locale\sq.js" />
+    <Content Include="Scripts\moment\locale\sr-cyrl.js" />
+    <Content Include="Scripts\moment\locale\sr.js" />
+    <Content Include="Scripts\moment\locale\ss.js" />
+    <Content Include="Scripts\moment\locale\sv.js" />
+    <Content Include="Scripts\moment\locale\sw.js" />
+    <Content Include="Scripts\moment\locale\ta.js" />
+    <Content Include="Scripts\moment\locale\te.js" />
+    <Content Include="Scripts\moment\locale\tet.js" />
+    <Content Include="Scripts\moment\locale\th.js" />
+    <Content Include="Scripts\moment\locale\tl-ph.js" />
+    <Content Include="Scripts\moment\locale\tlh.js" />
+    <Content Include="Scripts\moment\locale\tr.js" />
+    <Content Include="Scripts\moment\locale\tzl.js" />
+    <Content Include="Scripts\moment\locale\tzm-latn.js" />
+    <Content Include="Scripts\moment\locale\tzm.js" />
+    <Content Include="Scripts\moment\locale\uk.js" />
+    <Content Include="Scripts\moment\locale\ur.js" />
+    <Content Include="Scripts\moment\locale\uz-latn.js" />
+    <Content Include="Scripts\moment\locale\uz.js" />
+    <Content Include="Scripts\moment\locale\vi.js" />
+    <Content Include="Scripts\moment\locale\x-pseudo.js" />
+    <Content Include="Scripts\moment\locale\yo.js" />
+    <Content Include="Scripts\moment\locale\zh-cn.js" />
+    <Content Include="Scripts\moment\locale\zh-hk.js" />
+    <Content Include="Scripts\moment\locale\zh-tw.js" />
+    <Content Include="Scripts\moment\min\locales.js" />
+    <Content Include="Scripts\moment\min\locales.min.js" />
+    <Content Include="Scripts\moment\min\moment-with-locales.js" />
+    <Content Include="Scripts\moment\min\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment\min\moment.min.js" />
+    <Content Include="Scripts\moment\moment.js" />
+    <Content Include="Scripts\moment\package.js" />
+    <Content Include="Scripts\moment\src\lib\create\check-overflow.js" />
+    <Content Include="Scripts\moment\src\lib\create\date-from-array.js" />
+    <Content Include="Scripts\moment\src\lib\create\from-anything.js" />
+    <Content Include="Scripts\moment\src\lib\create\from-array.js" />
+    <Content Include="Scripts\moment\src\lib\create\from-object.js" />
+    <Content Include="Scripts\moment\src\lib\create\from-string-and-array.js" />
+    <Content Include="Scripts\moment\src\lib\create\from-string-and-format.js" />
+    <Content Include="Scripts\moment\src\lib\create\from-string.js" />
+    <Content Include="Scripts\moment\src\lib\create\local.js" />
+    <Content Include="Scripts\moment\src\lib\create\parsing-flags.js" />
+    <Content Include="Scripts\moment\src\lib\create\utc.js" />
+    <Content Include="Scripts\moment\src\lib\create\valid.js" />
+    <Content Include="Scripts\moment\src\lib\duration\abs.js" />
+    <Content Include="Scripts\moment\src\lib\duration\add-subtract.js" />
+    <Content Include="Scripts\moment\src\lib\duration\as.js" />
+    <Content Include="Scripts\moment\src\lib\duration\bubble.js" />
+    <Content Include="Scripts\moment\src\lib\duration\constructor.js" />
+    <Content Include="Scripts\moment\src\lib\duration\create.js" />
+    <Content Include="Scripts\moment\src\lib\duration\duration.js" />
+    <Content Include="Scripts\moment\src\lib\duration\get.js" />
+    <Content Include="Scripts\moment\src\lib\duration\humanize.js" />
+    <Content Include="Scripts\moment\src\lib\duration\iso-string.js" />
+    <Content Include="Scripts\moment\src\lib\duration\prototype.js" />
+    <Content Include="Scripts\moment\src\lib\duration\valid.js" />
+    <Content Include="Scripts\moment\src\lib\format\format.js" />
+    <Content Include="Scripts\moment\src\lib\locale\base-config.js" />
+    <Content Include="Scripts\moment\src\lib\locale\calendar.js" />
+    <Content Include="Scripts\moment\src\lib\locale\constructor.js" />
+    <Content Include="Scripts\moment\src\lib\locale\en.js" />
+    <Content Include="Scripts\moment\src\lib\locale\formats.js" />
+    <Content Include="Scripts\moment\src\lib\locale\invalid.js" />
+    <Content Include="Scripts\moment\src\lib\locale\lists.js" />
+    <Content Include="Scripts\moment\src\lib\locale\locale.js" />
+    <Content Include="Scripts\moment\src\lib\locale\locales.js" />
+    <Content Include="Scripts\moment\src\lib\locale\ordinal.js" />
+    <Content Include="Scripts\moment\src\lib\locale\pre-post-format.js" />
+    <Content Include="Scripts\moment\src\lib\locale\prototype.js" />
+    <Content Include="Scripts\moment\src\lib\locale\relative.js" />
+    <Content Include="Scripts\moment\src\lib\locale\set.js" />
+    <Content Include="Scripts\moment\src\lib\moment\add-subtract.js" />
+    <Content Include="Scripts\moment\src\lib\moment\calendar.js" />
+    <Content Include="Scripts\moment\src\lib\moment\clone.js" />
+    <Content Include="Scripts\moment\src\lib\moment\compare.js" />
+    <Content Include="Scripts\moment\src\lib\moment\constructor.js" />
+    <Content Include="Scripts\moment\src\lib\moment\creation-data.js" />
+    <Content Include="Scripts\moment\src\lib\moment\diff.js" />
+    <Content Include="Scripts\moment\src\lib\moment\format.js" />
+    <Content Include="Scripts\moment\src\lib\moment\from.js" />
+    <Content Include="Scripts\moment\src\lib\moment\get-set.js" />
+    <Content Include="Scripts\moment\src\lib\moment\locale.js" />
+    <Content Include="Scripts\moment\src\lib\moment\min-max.js" />
+    <Content Include="Scripts\moment\src\lib\moment\moment.js" />
+    <Content Include="Scripts\moment\src\lib\moment\now.js" />
+    <Content Include="Scripts\moment\src\lib\moment\prototype.js" />
+    <Content Include="Scripts\moment\src\lib\moment\start-end-of.js" />
+    <Content Include="Scripts\moment\src\lib\moment\to-type.js" />
+    <Content Include="Scripts\moment\src\lib\moment\to.js" />
+    <Content Include="Scripts\moment\src\lib\moment\valid.js" />
+    <Content Include="Scripts\moment\src\lib\parse\regex.js" />
+    <Content Include="Scripts\moment\src\lib\parse\token.js" />
+    <Content Include="Scripts\moment\src\lib\units\aliases.js" />
+    <Content Include="Scripts\moment\src\lib\units\constants.js" />
+    <Content Include="Scripts\moment\src\lib\units\day-of-month.js" />
+    <Content Include="Scripts\moment\src\lib\units\day-of-week.js" />
+    <Content Include="Scripts\moment\src\lib\units\day-of-year.js" />
+    <Content Include="Scripts\moment\src\lib\units\hour.js" />
+    <Content Include="Scripts\moment\src\lib\units\millisecond.js" />
+    <Content Include="Scripts\moment\src\lib\units\minute.js" />
+    <Content Include="Scripts\moment\src\lib\units\month.js" />
+    <Content Include="Scripts\moment\src\lib\units\offset.js" />
+    <Content Include="Scripts\moment\src\lib\units\priorities.js" />
+    <Content Include="Scripts\moment\src\lib\units\quarter.js" />
+    <Content Include="Scripts\moment\src\lib\units\second.js" />
+    <Content Include="Scripts\moment\src\lib\units\timestamp.js" />
+    <Content Include="Scripts\moment\src\lib\units\timezone.js" />
+    <Content Include="Scripts\moment\src\lib\units\units.js" />
+    <Content Include="Scripts\moment\src\lib\units\week-calendar-utils.js" />
+    <Content Include="Scripts\moment\src\lib\units\week-year.js" />
+    <Content Include="Scripts\moment\src\lib\units\week.js" />
+    <Content Include="Scripts\moment\src\lib\units\year.js" />
+    <Content Include="Scripts\moment\src\lib\utils\abs-ceil.js" />
+    <Content Include="Scripts\moment\src\lib\utils\abs-floor.js" />
+    <Content Include="Scripts\moment\src\lib\utils\abs-round.js" />
+    <Content Include="Scripts\moment\src\lib\utils\compare-arrays.js" />
+    <Content Include="Scripts\moment\src\lib\utils\defaults.js" />
+    <Content Include="Scripts\moment\src\lib\utils\deprecate.js" />
+    <Content Include="Scripts\moment\src\lib\utils\extend.js" />
+    <Content Include="Scripts\moment\src\lib\utils\has-own-prop.js" />
+    <Content Include="Scripts\moment\src\lib\utils\hooks.js" />
+    <Content Include="Scripts\moment\src\lib\utils\index-of.js" />
+    <Content Include="Scripts\moment\src\lib\utils\is-array.js" />
+    <Content Include="Scripts\moment\src\lib\utils\is-date.js" />
+    <Content Include="Scripts\moment\src\lib\utils\is-function.js" />
+    <Content Include="Scripts\moment\src\lib\utils\is-number.js" />
+    <Content Include="Scripts\moment\src\lib\utils\is-object-empty.js" />
+    <Content Include="Scripts\moment\src\lib\utils\is-object.js" />
+    <Content Include="Scripts\moment\src\lib\utils\is-undefined.js" />
+    <Content Include="Scripts\moment\src\lib\utils\keys.js" />
+    <Content Include="Scripts\moment\src\lib\utils\map.js" />
+    <Content Include="Scripts\moment\src\lib\utils\some.js" />
+    <Content Include="Scripts\moment\src\lib\utils\to-int.js" />
+    <Content Include="Scripts\moment\src\lib\utils\zero-fill.js" />
+    <Content Include="Scripts\moment\src\locale\af.js" />
+    <Content Include="Scripts\moment\src\locale\ar-dz.js" />
+    <Content Include="Scripts\moment\src\locale\ar-kw.js" />
+    <Content Include="Scripts\moment\src\locale\ar-ly.js" />
+    <Content Include="Scripts\moment\src\locale\ar-ma.js" />
+    <Content Include="Scripts\moment\src\locale\ar-sa.js" />
+    <Content Include="Scripts\moment\src\locale\ar-tn.js" />
+    <Content Include="Scripts\moment\src\locale\ar.js" />
+    <Content Include="Scripts\moment\src\locale\az.js" />
+    <Content Include="Scripts\moment\src\locale\be.js" />
+    <Content Include="Scripts\moment\src\locale\bg.js" />
+    <Content Include="Scripts\moment\src\locale\bn.js" />
+    <Content Include="Scripts\moment\src\locale\bo.js" />
+    <Content Include="Scripts\moment\src\locale\br.js" />
+    <Content Include="Scripts\moment\src\locale\bs.js" />
+    <Content Include="Scripts\moment\src\locale\ca.js" />
+    <Content Include="Scripts\moment\src\locale\cs.js" />
+    <Content Include="Scripts\moment\src\locale\cv.js" />
+    <Content Include="Scripts\moment\src\locale\cy.js" />
+    <Content Include="Scripts\moment\src\locale\da.js" />
+    <Content Include="Scripts\moment\src\locale\de-at.js" />
+    <Content Include="Scripts\moment\src\locale\de-ch.js" />
+    <Content Include="Scripts\moment\src\locale\de.js" />
+    <Content Include="Scripts\moment\src\locale\dv.js" />
+    <Content Include="Scripts\moment\src\locale\el.js" />
+    <Content Include="Scripts\moment\src\locale\en-au.js" />
+    <Content Include="Scripts\moment\src\locale\en-ca.js" />
+    <Content Include="Scripts\moment\src\locale\en-gb.js" />
+    <Content Include="Scripts\moment\src\locale\en-ie.js" />
+    <Content Include="Scripts\moment\src\locale\en-nz.js" />
+    <Content Include="Scripts\moment\src\locale\eo.js" />
+    <Content Include="Scripts\moment\src\locale\es-do.js" />
+    <Content Include="Scripts\moment\src\locale\es.js" />
+    <Content Include="Scripts\moment\src\locale\et.js" />
+    <Content Include="Scripts\moment\src\locale\eu.js" />
+    <Content Include="Scripts\moment\src\locale\fa.js" />
+    <Content Include="Scripts\moment\src\locale\fi.js" />
+    <Content Include="Scripts\moment\src\locale\fo.js" />
+    <Content Include="Scripts\moment\src\locale\fr-ca.js" />
+    <Content Include="Scripts\moment\src\locale\fr-ch.js" />
+    <Content Include="Scripts\moment\src\locale\fr.js" />
+    <Content Include="Scripts\moment\src\locale\fy.js" />
+    <Content Include="Scripts\moment\src\locale\gd.js" />
+    <Content Include="Scripts\moment\src\locale\gl.js" />
+    <Content Include="Scripts\moment\src\locale\gom-latn.js" />
+    <Content Include="Scripts\moment\src\locale\he.js" />
+    <Content Include="Scripts\moment\src\locale\hi.js" />
+    <Content Include="Scripts\moment\src\locale\hr.js" />
+    <Content Include="Scripts\moment\src\locale\hu.js" />
+    <Content Include="Scripts\moment\src\locale\hy-am.js" />
+    <Content Include="Scripts\moment\src\locale\id.js" />
+    <Content Include="Scripts\moment\src\locale\is.js" />
+    <Content Include="Scripts\moment\src\locale\it.js" />
+    <Content Include="Scripts\moment\src\locale\ja.js" />
+    <Content Include="Scripts\moment\src\locale\jv.js" />
+    <Content Include="Scripts\moment\src\locale\ka.js" />
+    <Content Include="Scripts\moment\src\locale\kk.js" />
+    <Content Include="Scripts\moment\src\locale\km.js" />
+    <Content Include="Scripts\moment\src\locale\kn.js" />
+    <Content Include="Scripts\moment\src\locale\ko.js" />
+    <Content Include="Scripts\moment\src\locale\ky.js" />
+    <Content Include="Scripts\moment\src\locale\lb.js" />
+    <Content Include="Scripts\moment\src\locale\lo.js" />
+    <Content Include="Scripts\moment\src\locale\lt.js" />
+    <Content Include="Scripts\moment\src\locale\lv.js" />
+    <Content Include="Scripts\moment\src\locale\me.js" />
+    <Content Include="Scripts\moment\src\locale\mi.js" />
+    <Content Include="Scripts\moment\src\locale\mk.js" />
+    <Content Include="Scripts\moment\src\locale\ml.js" />
+    <Content Include="Scripts\moment\src\locale\mr.js" />
+    <Content Include="Scripts\moment\src\locale\ms-my.js" />
+    <Content Include="Scripts\moment\src\locale\ms.js" />
+    <Content Include="Scripts\moment\src\locale\my.js" />
+    <Content Include="Scripts\moment\src\locale\nb.js" />
+    <Content Include="Scripts\moment\src\locale\ne.js" />
+    <Content Include="Scripts\moment\src\locale\nl-be.js" />
+    <Content Include="Scripts\moment\src\locale\nl.js" />
+    <Content Include="Scripts\moment\src\locale\nn.js" />
+    <Content Include="Scripts\moment\src\locale\pa-in.js" />
+    <Content Include="Scripts\moment\src\locale\pl.js" />
+    <Content Include="Scripts\moment\src\locale\pt-br.js" />
+    <Content Include="Scripts\moment\src\locale\pt.js" />
+    <Content Include="Scripts\moment\src\locale\ro.js" />
+    <Content Include="Scripts\moment\src\locale\ru.js" />
+    <Content Include="Scripts\moment\src\locale\sd.js" />
+    <Content Include="Scripts\moment\src\locale\se.js" />
+    <Content Include="Scripts\moment\src\locale\si.js" />
+    <Content Include="Scripts\moment\src\locale\sk.js" />
+    <Content Include="Scripts\moment\src\locale\sl.js" />
+    <Content Include="Scripts\moment\src\locale\sq.js" />
+    <Content Include="Scripts\moment\src\locale\sr-cyrl.js" />
+    <Content Include="Scripts\moment\src\locale\sr.js" />
+    <Content Include="Scripts\moment\src\locale\ss.js" />
+    <Content Include="Scripts\moment\src\locale\sv.js" />
+    <Content Include="Scripts\moment\src\locale\sw.js" />
+    <Content Include="Scripts\moment\src\locale\ta.js" />
+    <Content Include="Scripts\moment\src\locale\te.js" />
+    <Content Include="Scripts\moment\src\locale\tet.js" />
+    <Content Include="Scripts\moment\src\locale\th.js" />
+    <Content Include="Scripts\moment\src\locale\tl-ph.js" />
+    <Content Include="Scripts\moment\src\locale\tlh.js" />
+    <Content Include="Scripts\moment\src\locale\tr.js" />
+    <Content Include="Scripts\moment\src\locale\tzl.js" />
+    <Content Include="Scripts\moment\src\locale\tzm-latn.js" />
+    <Content Include="Scripts\moment\src\locale\tzm.js" />
+    <Content Include="Scripts\moment\src\locale\uk.js" />
+    <Content Include="Scripts\moment\src\locale\ur.js" />
+    <Content Include="Scripts\moment\src\locale\uz-latn.js" />
+    <Content Include="Scripts\moment\src\locale\uz.js" />
+    <Content Include="Scripts\moment\src\locale\vi.js" />
+    <Content Include="Scripts\moment\src\locale\x-pseudo.js" />
+    <Content Include="Scripts\moment\src\locale\yo.js" />
+    <Content Include="Scripts\moment\src\locale\zh-cn.js" />
+    <Content Include="Scripts\moment\src\locale\zh-hk.js" />
+    <Content Include="Scripts\moment\src\locale\zh-tw.js" />
+    <Content Include="Scripts\moment\src\moment.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\moment\CHANGELOG.md" />
+    <Content Include="Scripts\moment\LICENSE" />
+    <Content Include="Scripts\moment\package.json" />
+    <Content Include="Scripts\moment\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MetodosNumericos.BusinessLogic\MetodosNumericos.BusinessLogic.csproj">
+      <Project>{c5ba02bc-5c0c-45b1-a51f-ac66cd99745f}</Project>
+      <Name>MetodosNumericos.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetodosNumericos.Entidades\MetodosNumericos.Entidades.csproj">
+      <Project>{28c9ce19-6418-45ac-865a-73674eec1096}</Project>
+      <Name>MetodosNumericos.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\moment\moment.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54715</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54715/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

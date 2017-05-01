@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Métodos Numéricos";
+}
+
+<hr />
+<div class="form-group">
+    <label>Función f(x): </label><input type="text" class="form-control" name="txtFunction" id="txtFunction" placeholder="escriba su función" />
+    <br />
+    <button class="btn btn-danger" id="btnGraficar">Graficar función</button>
+    <button class="btn btn-success" id="btnGraficar">Newton Raphson</button>
+    <button class="btn btn-info" id="btnGraficar">Regla Falsa</button>
+    </div>
+    
+
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+
+
+    @section scripts{
+
+        <script>
+            var ctx = document.getElementById("myChart");
+            function obtenerCoordenadas(sFunction) {
+                //setValoresInicialFinal();
+
+                $.ajax({
+                    url: '@Url.Action("ObtenerValoresCordenadas", "Home")',
+                    data: { sFunction: sFunction, inicial: -10, final: 10 },
+                    beforeSend: function () { console.log('obteniendo coordenadas'); },
+                    complete: function () { console.log('completo!'); },
+                    success: function (data) { console.log(data); imprimirData(data, sFunction); },
+                    error: function () { console.log('Error!'); }
+                });
+            }
+
+            function setValoresInicialFinal() {
+                if (!$('#txtInicial').val())
+                    $('#txtInicial').val(-10);
+
+                if (!$('#txtFinal').val())
+                    $('#txtFinal').val(10);
+
+            }
+            function imprimirData(data, sFunction) {
+
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        datasets: [{
+                            label: sFunction,
+                            data: data
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [{
+                                type: 'linear',
+                                position: 'bottom',
+                                ticks: {
+                                    max: 10,
+                                    min: -10,
+                                    stepSize: 1
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    max: 10,
+                                    min: -10,
+                                    stepSize: 1
+                                }
+                            }]
+                        }
+                    }
+                });
+            }
+            $(function () {
+
+                $('#btnGraficar').on('click', function (e) {
+                    e.preventDefault();
+                    obtenerCoordenadas($('#txtFunction').val());
+                });
+
+            });
+
+        </script>
+
+    }

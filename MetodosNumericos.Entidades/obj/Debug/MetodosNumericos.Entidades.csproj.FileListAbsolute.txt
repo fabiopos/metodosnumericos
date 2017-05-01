@@ -1,0 +1,5 @@
+D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.Entidades\bin\Debug\MetodosNumericos.Entidades.dll
+D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.Entidades\bin\Debug\MetodosNumericos.Entidades.pdb
+D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.Entidades\obj\Debug\MetodosNumericos.Entidades.csprojResolveAssemblyReference.cache
+D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.Entidades\obj\Debug\MetodosNumericos.Entidades.dll
+D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.Entidades\obj\Debug\MetodosNumericos.Entidades.pdb
