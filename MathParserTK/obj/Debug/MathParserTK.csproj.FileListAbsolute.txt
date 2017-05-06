@@ -1,4 +1,0 @@
-D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MathParserTK\bin\Debug\MathParserTK.dll
-D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MathParserTK\bin\Debug\MathParserTK.pdb
-D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MathParserTK\obj\Debug\MathParserTK.dll
-D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MathParserTK\obj\Debug\MathParserTK.pdb

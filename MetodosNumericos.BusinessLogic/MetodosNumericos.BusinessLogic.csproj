@@ -81,10 +81,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MathParserTK\MathParserTK.csproj">
-      <Project>{c349510c-c794-477e-9b26-e1a4b91e3a88}</Project>
-      <Name>MathParserTK</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MetodosNumericos.Entidades\MetodosNumericos.Entidades.csproj">
       <Project>{28c9ce19-6418-45ac-865a-73674eec1096}</Project>
       <Name>MetodosNumericos.Entidades</Name>

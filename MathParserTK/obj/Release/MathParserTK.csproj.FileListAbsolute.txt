@@ -1,5 +1,0 @@
-F:\Universidad\Análisis numérico\MathParserTK\MathParserTK\bin\Release\MathParserTK.dll
-F:\Universidad\Análisis numérico\MathParserTK\MathParserTK\bin\Release\MathParserTK.pdb
-F:\Universidad\Análisis numérico\MathParserTK\MathParserTK\obj\Release\MathParserTK.csprojResolveAssemblyReference.cache
-F:\Universidad\Análisis numérico\MathParserTK\MathParserTK\obj\Release\MathParserTK.dll
-F:\Universidad\Análisis numérico\MathParserTK\MathParserTK\obj\Release\MathParserTK.pdb

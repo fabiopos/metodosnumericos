@@ -22,3 +22,6 @@ D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumerico
 D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.Console\bin\Debug\MathNet.Numerics.FSharp.dll
 D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.Console\bin\Debug\MathNet.Numerics.xml
 D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.Console\bin\Debug\MathNet.Numerics.FSharp.xml
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.Console\bin\Debug\MetodosNumericos.Console.exe.config
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.Console\obj\Debug\MetodosNumericos.Console.exe
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.Console\obj\Debug\MetodosNumericos.Console.pdb

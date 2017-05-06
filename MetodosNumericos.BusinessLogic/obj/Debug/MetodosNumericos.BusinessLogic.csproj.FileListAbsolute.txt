@@ -22,3 +22,25 @@ D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumerico
 D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Numerics.xml
 D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Numerics.FSharp.xml
 D:\Documentos\DEV\UNIVERSIDAD\ANALISIS NUMERICO\MetodosNumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Symbolics.xml
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MetodosNumericos.BusinessLogic.dll.config
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MetodosNumericos.BusinessLogic.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MetodosNumericos.BusinessLogic.pdb
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\FParsec.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\FParsecCS.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\FSharp.Core.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Numerics.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Numerics.FSharp.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Symbolics.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathParser.org-mXparser.Net452.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MetodosNumericos.Entidades.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\SimpleExpressionEvaluator.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MetodosNumericos.Entidades.pdb
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\FParsec.xml
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\FParsecCS.xml
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\FSharp.Core.xml
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Numerics.xml
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Numerics.FSharp.xml
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\bin\Debug\MathNet.Symbolics.xml
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\obj\Debug\MetodosNumericos.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\obj\Debug\MetodosNumericos.BusinessLogic.dll
+D:\Documentos\DEV\GIT\MetodosNumericos\metodosnumericos\MetodosNumericos.BusinessLogic\obj\Debug\MetodosNumericos.BusinessLogic.pdb
